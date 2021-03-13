@@ -39,15 +39,58 @@
               </div>
               <p id="favorites"> Or <span class="favorites-link">view your saved favorites</span></p>
               <div class="desktop-hide" id="mobile-buttons">
-                <button class= "button button-mobile is-primary is-light" id= "mobile-search"></button>
-                <button class= "button button-mobile is-primary is-light" id= "mobile-recipe"> </button>
-                <button class= "button button-mobile is-primary is-light" id= "mobile-nutrition"></button>
+                <div class="dropdown">
+                  <div class="dropdown-trigger">
+                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                      <span>Click me</span>
+                      <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                    <div class="dropdown-content">
+                      <a href="#" class="dropdown-item">
+                        Overview
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Modifiers
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Grid
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Form
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Elements
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Components
+                      </a>
+                      <a href="#" class="dropdown-item">
+                        Layout
+                      </a>
+                      <hr class="dropdown-divider">
+                      <a href="#" class="dropdown-item">
+                        More
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
          </div>
        </div>     
     </section>
+
+    <!-- Recipe list: should pop up when search button is clicked and display recipes -->
+<div class= "columns">
+  <div class= "column is-4" id="search-results">
+          <article class="panel is-primary" id= "results-list">
+          </article>
+  </div>
 
     <script src="Assets/script.js"></script>
 </body>
