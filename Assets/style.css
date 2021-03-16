@@ -1,5 +1,56 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+
+body {
+    background-image: linear-gradient(to top left,#B3DEE5 , #B3DEE5, #FAE6B1);
+    text-align: left;
+    color: black;
+}
+
+.card {
+    border-radius: 25px;
+    font-family: 'Mandali', sans-serif;
+    font-size: 22px;
+    margin-left: 50px;
+    margin-top: 50px;
+        opacity: .5;
+        transition: opacity .5s ease-out;
+        -moz-transition: opacity .5s ease-out;
+        -webkit-transition: opacity .5s ease-out;
+        -o-transition: opacity .5s ease-out;
+        background: url(/img/cream_dust.png) repeat 0 0;
+        box-shadow: 0 0 1em 1em ;
+    }
+    
+    .card:hover {
+        opacity: 1;
+    }
+  }
+
+  .card-image {
+      height: auto;
+      width: auto;
+  }
+
+  .title {
+    font-family: 'Corben', Georgia, Times, serif;
+    text-shadow: 1px 1px 1px #ccc;
+  }
+
+  .subtitle {
+    font-family: 'Mandali', sans-serif;
+    font-size: 22px;
+  }
+
+  .hero-body {
+    background-image: linear-gradient(to top right, #B3DEE5 , );
+  }
+
+  img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+    background-size: auto;
+}
+
+.is-fullwidth {
+    background-color: lightgreen;
 }
