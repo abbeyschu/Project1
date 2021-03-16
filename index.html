@@ -6,9 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Finder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" href="/Assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
+  
+  <header class="container-fluid">
+
+      Search for your Favorite Recipe
+</header>
+
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input" type="text" placeholder="Type your Recipe">
+        </div>
+        <div class="control">
+          <a class="button is-info">
+            Search
+          </a>
+        </div>
+      </div>
+
         <section class="hero is-primary is-bold">
             <div class="hero-body">
               <div class= "columns">
@@ -84,7 +102,6 @@
        </div>     
     </section>
 
-
     <!-- Recipe list: should pop up when search button is clicked and display recipes -->
     <div class="columns">
       <div class="column is-one-third">
@@ -108,14 +125,15 @@
           For an extra thick and creamy bowl, add oat bran. It'll make for a hearty helping and also add more fiber to your meal. If you love the taste of chai, you'll enjoy this spiced version with coriander, cinnamon, and turmeric.
           <br>
          <strong> Ingredients:</strong> Milk, salt, coriander, cardamom, cinnamon, turmeric, honey, vanilla extract, regular oats, oat bran.
+         <br>
+         <button class="button is-fullwidth">See full recipe</button>
         </div>
       </div>
     </div>
   </div>
   </div>
 
-  
-
     <script src="Assets/script.js"></script>
+
 </body>
 </html>

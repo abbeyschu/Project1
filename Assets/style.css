@@ -17,7 +17,7 @@ body {
         -webkit-transition: opacity .5s ease-out;
         -o-transition: opacity .5s ease-out;
         background: url(/img/cream_dust.png) repeat 0 0;
-        box-shadow: 0 0 1em 1em #B3DEE5;
+        box-shadow: 0 0 1em 1em ;
     }
     
     .card:hover {
