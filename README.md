@@ -1,10 +1,15 @@
-# Project1
-Bootcamp project 1
+# Project 1 - Recipe Finder
 
-Introduction
+## Description
+
 The website app our group created allows a user to enter a desired meal into a search input field, which will return a list of recipes (results) that the user can then click on to display an image of the meal, ingredients, nutritional value, and cooking instructions. 
 
-Instructions
+## Installation
+
+Visit this link to view the recipe finder: https://abbeyschu.github.io/RecipeSearchProject/
+
+## Instructions
+
 WHEN I enter a type of meal (example: lasagna)
 
 THEN I am presented with a list of recipes for the meal.
@@ -21,16 +26,6 @@ WHEN I mark a recipe as a favorite/one I want to save
 
 THEN the recipe will be saved in a list I can access.
 
-# Project 1 - Recipe Finder
-
-## Description
-
-Enter description here
-
-## Installation
-
-Visit this link to view the recipe finder: https://abbeyschu.github.io/RecipeSearchProject/
-
 ## Screenshots
 
 ![Image of Results Page](Assets/Images/Results.png)
@@ -44,10 +39,10 @@ Project was created using:
 
 ## Contributors 
 
-Abbey Schueller - https://github.com/abbeyschu 
-Raya Alsaedi - https://github.com/rayaalsaedi 
-Matt Dragin - https://github.com/Mdragin 
-Perlum Toombs - https://github.com/ClarkT06 
+* Abbey Schueller - https://github.com/abbeyschu 
+* Raya Alsaedi - https://github.com/rayaalsaedi 
+* Matt Dragin - https://github.com/Mdragin 
+* Perlum Toombs - https://github.com/ClarkT06 
 
 
 ## License 
