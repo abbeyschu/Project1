@@ -16,6 +16,8 @@ body {
         -moz-transition: opacity .5s ease-out;
         -webkit-transition: opacity .5s ease-out;
         -o-transition: opacity .5s ease-out;
+        background: url(/img/cream_dust.png) repeat 0 0;
+        box-shadow: 0 0 1em 1em #B3DEE5;
     }
     
     .card:hover {
@@ -29,8 +31,8 @@ body {
   }
 
   .title {
-    font-family: 'Calistoga', cursive;
-    font-size: 45px;
+    font-family: 'Corben', Georgia, Times, serif;
+    text-shadow: 1px 1px 1px #ccc;
   }
 
   .subtitle {
