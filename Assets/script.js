@@ -83,10 +83,19 @@ function printResults(resultObj) {
         for (var i = 0; i < data[1].drinks.length; i++) {
             printResults(data[1].drinks[i]);
         }
-    }).catch(function(err){
-        console.error(err);
-    });
-}
+    }).catch(fetch(cocktailNameURL)
+    .then(response=>response.json())
+    .then(data=>{
+        resultContentEl.textContent = "";
+        for (var i = 0; i < data.drinks.length; i++) {
+            printResults(data.drinks[i])}
+    }).catch(fetch(cocktailIngredientURL)
+    .then(response=>response.json())
+    .then(data=>{
+        resultContentEl.textContent = "";
+        for (var i = 0; i < data.drinks.length; i++) {
+            printResults(data.drinks[i])}
+})))}
 
 searchButton.addEventListener("click", searchApi);
 
