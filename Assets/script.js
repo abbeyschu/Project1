@@ -8,67 +8,33 @@ var searchInput = document.getElementById("recipe-search-2");
 var resultContentEl = document.querySelector('#result-content');
 
 
-// available data when searching by drink name
-// strDrink = drink name
-// strAlcoholic = alcoholic or non
-// strInstructions
-// strDrinkThumb = image link
-
-// strIngredient1
-// strIngredient2
-// strIngredient3
-// strIngredient4
-// strIngredient5
-// strIngredient6
-// strIngredient7
-// strIngredient8
-// strIngredient9
-// strIngredient10
-// strIngredient11
-// strIngredient12
-// strIngredient13
-// strIngredient14
-// strIngredient15
-
-// strMeasure1
-// strMeasure2
-// strMeasure3
-// strMeasure4
-// strMeasure5
-// strMeasure6
-// strMeasure7
-// strMeasure8
-// strMeasure9
-// strMeasure10
-// strMeasure11
-// strMeasure12
-// strMeasure13
-// strMeasure14
-// strMeasure15
-
 function printResults(resultObj) {
     console.log(resultObj);
   
     // create html elements to hold results content
+    // class lists need to be reviewed and updated yet
     var resultCard = document.createElement('div');
-    // resultCard.classList.add("INSERT CSS CLASSES HERE");
+    resultCard.classList.add('card');
   
     var resultBody = document.createElement('div');
-    // resultBody.classList.add("INSERT CSS CLASSES HERE");
+    resultBody.classList.add('car-content');
     resultCard.append(resultBody);
   
     var nameEl = document.createElement('h3');
+    nameEl.classList.add('title is-4');
     nameEl.textContent = resultObj.strDrink;
   
     var drinkTypeEl = document.createElement('p');
+    drinkTypeEl.classList.add('subtitle is-6');
     drinkTypeEl.innerHTML = resultObj.strAlcoholic;
 
     var imageEl = document.createElement('img');
+    imageEl.classList.add('card-image');
     imageEl.src = resultObj.strDrinkThumb
   
     var linkButtonEl = document.createElement('button');
     linkButtonEl.textContent = 'See full recipe';
-    // linkButtonEl.classList.add("INSERT CSS CLASSES HERE");
+    linkButtonEl.classList.add('button is-fullwidth');
   
     resultBody.append(nameEl, drinkTypeEl, imageEl, linkButtonEl);
   
@@ -104,6 +70,8 @@ function printResults(resultObj) {
 
 searchButton.addEventListener("click", searchApi);
 
+
+// see full recipe button and modal
 var button = document.getElementById('button');
 var modal = document.getElementById('page-modal');
 var closeModal = document.getElementsByClassName('modal-close')[0];
