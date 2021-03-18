@@ -12,33 +12,51 @@ function printResults(resultObj) {
     console.log(resultObj);
   
     // create html elements to hold results content
-    // class lists need to be reviewed and updated yet
-    var resultCard = document.createElement('div');
-    resultCard.classList.add('card');
+    var card = document.createElement('div');
+    card.classList.add('card');
+    resultContentEl.append(card);
+
+    var cardImage = document.createElement('div');
+    cardImage.classList.add('card-image');
+    card.append(cardImage);
+
+    var imageFigure = document.createElement('figure');
+    imageFigure.classList.add('image', 'is-4by3');
+    cardImage.append(imageFigure);
+
+    var image = document.createElement('img');
+    image.src = resultObj.strDrinkThumb
+    imageFigure.append(image);
+
   
-    var resultBody = document.createElement('div');
-    resultBody.classList.add('car-content');
-    resultCard.append(resultBody);
+    var cardContent = document.createElement('div');
+    cardContent.classList.add('card-content');
+    card.append(cardContent);
+
+    var media = document.createElement('div');
+    media.classList.add('media');
+    cardContent.append(media);
+
+    var mediaContent = document.createElement('div');
+    mediaContent.classList.add('media-content');
+    media.append(mediaContent);
   
-    var nameEl = document.createElement('h3');
-    nameEl.classList.add('title is-4');
-    nameEl.textContent = resultObj.strDrink;
+    var nameEl = document.createElement('p');
+    nameEl.classList.add('title', 'is-4');
+    nameEl.innerHTML = resultObj.strDrink;
+    mediaContent.append(nameEl);
   
     var drinkTypeEl = document.createElement('p');
-    drinkTypeEl.classList.add('subtitle is-6');
+    drinkTypeEl.classList.add('subtitle', 'is-6');
     drinkTypeEl.innerHTML = resultObj.strAlcoholic;
-
-    var imageEl = document.createElement('img');
-    imageEl.classList.add('card-image');
-    imageEl.src = resultObj.strDrinkThumb
+    mediaContent.append(drinkTypeEl);
   
     var linkButtonEl = document.createElement('button');
     linkButtonEl.textContent = 'See full recipe';
-    linkButtonEl.classList.add('button is-fullwidth');
-  
-    resultBody.append(nameEl, drinkTypeEl, imageEl, linkButtonEl);
-  
-    resultContentEl.append(resultCard);
+    linkButtonEl.classList.add('button', 'is-fullwidth');
+    linkButtonEl.setAttribute('id','button');
+    cardContent.append(linkButtonEl);
+
   }
   
   function searchApi() {
@@ -48,33 +66,44 @@ function printResults(resultObj) {
     // search by ingredient list
     var cocktailIngredientURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + searchInput.value
 
+
     Promise.all([
         fetch(cocktailNameURL),
         fetch(cocktailIngredientURL)
     ]).then(function (responses) {
         return Promise.all(responses.map(function (response) {
-            return response.json();
+            return response.json()
         }));
     }).then(data=> {
         console.log(data);
-        resultContentEl.textContent = '';
+        resultContentEl.textContent = "";
         for (var i = 0; i < data[0].drinks.length; i++) {
             printResults(data[0].drinks[i]);
         };
         for (var i = 0; i < data[1].drinks.length; i++) {
             printResults(data[1].drinks[i]);
         }
-        }
-    );
-}
+    }).catch(fetch(cocktailNameURL)
+    .then(response=>response.json())
+    .then(data=>{
+        resultContentEl.textContent = "";
+        for (var i = 0; i < data.drinks.length; i++) {
+            printResults(data.drinks[i])}
+    }).catch(fetch(cocktailIngredientURL)
+    .then(response=>response.json())
+    .then(data=>{
+        resultContentEl.textContent = "";
+        for (var i = 0; i < data.drinks.length; i++) {
+            printResults(data.drinks[i])}
+})))}
 
 searchButton.addEventListener("click", searchApi);
-
 
 // see full recipe button and modal
 var button = document.getElementById('button');
 var modal = document.getElementById('page-modal');
 var closeModal = document.getElementsByClassName('modal-close')[0];
+
 
 button.onclick = function(){
     modal.style.display = 'block'
@@ -89,3 +118,5 @@ window.onclick = function(event){
         modal.style.display = 'none'
     }
 }
+
+
