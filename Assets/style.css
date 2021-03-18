@@ -23,7 +23,7 @@ body {
     .card:hover {
         opacity: 1;
     }
-  }
+  
 
   .card-image {
       height: auto;
@@ -53,4 +53,12 @@ body {
 
 .is-fullwidth {
     background-color: lightgreen;
+}
+
+.modal-card-head {
+background-color: #fae6b1;
+
+}
+.modal-card-body {
+  background-color: #b3dee5;
 }

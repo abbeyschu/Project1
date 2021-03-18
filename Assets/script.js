@@ -57,7 +57,9 @@ function printResults(resultObj) {
     linkButtonEl.setAttribute('id','button');
     cardContent.append(linkButtonEl);
 
-  }
+ 
+
+}
   
   function searchApi() {
     // search by cocktail name
@@ -107,6 +109,7 @@ var closeModal = document.getElementsByClassName('modal-close')[0];
 
 button.onclick = function(){
     modal.style.display = 'block'
+
     
 }
 closeModal.onclick = function(){
