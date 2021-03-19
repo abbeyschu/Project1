@@ -6,7 +6,7 @@ body {
 }
 
 .card {
-    border-radius: 25px;
+    /* border-radius: 25px; */
     font-family: 'Mandali', sans-serif;
     font-size: 22px;
     margin-left: 50px;
@@ -16,14 +16,17 @@ body {
         -moz-transition: opacity .5s ease-out;
         -webkit-transition: opacity .5s ease-out;
         -o-transition: opacity .5s ease-out;
-        background: url(/img/cream_dust.png) repeat 0 0;
+        /* background: url(/img/cream_dust.png); */
         box-shadow: 0 0 1em 1em ;
+        display: grid;
+        grid-gap:25px;
+        grid-template: auto/repeat(auto-fit, minmax(300px)1fr);
     }
     
     .card:hover {
         opacity: 1;
     }
-  }
+  
 
   .card-image {
       height: auto;
@@ -53,4 +56,15 @@ body {
 
 .is-fullwidth {
     background-color: lightgreen;
+}
+/* .result-content{
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap:25px;
+  grid-template: auto/repeat(auto-fit, minmax(300px)1fr);
+} */
+
+.card.invisible{
+  display: none;
 }
