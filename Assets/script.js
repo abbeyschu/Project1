@@ -1,14 +1,9 @@
-
-// get a random cocktail
-var cocktailRandomURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-
-
 var searchButton = document.getElementById("search-2");
 var searchInput = document.getElementById("recipe-search-2");
 var resultContentEl = document.querySelector('#result-content');
 var columnDiv = document.querySelector('.is-one-third');
 
-
+// create all html elements
 function printResults(resultObj) {
     console.log(resultObj);
   
@@ -57,7 +52,7 @@ function printResults(resultObj) {
     var linkButtonEl = document.createElement('button');
     linkButtonEl.textContent = 'See full recipe';
     linkButtonEl.classList.add('button', 'is-fullwidth');
-    linkButtonEl.setAttribute('id','button');
+    linkButtonEl.setAttribute('id','button'+ resultObj.idDrink);
     cardContent.append(linkButtonEl);
 
     printDesc(resultObj);
@@ -80,6 +75,7 @@ function searchApi() {
         console.log(data);
         for (var i = 0; i < data.drinks.length; i++) {
             printResults(data.drinks[i]);
+            showModal(data.drinks[i])
         }});
 
     fetch(cocktailIngredientURL)
@@ -91,7 +87,8 @@ function searchApi() {
             .then(response=>response.json())
             .then(data=>{
                 console.log(data);
-                printResults(data.drinks[0])
+                printResults(data.drinks[0]);
+                showModal(data.drinks[0])
             })
         }
     });
@@ -105,7 +102,7 @@ function printDesc(resultObj){
 
     var modal = document.createElement('div');
     modal.classList.add('modal');
-    modal.setAttribute("id","page-modal");
+    modal.setAttribute("id","page-modal"+ resultObj.idDrink);
     allModals.append(modal);
 
     var modalBackground =document.createElement('div');
@@ -140,110 +137,111 @@ function printDesc(resultObj){
 
     var ingredientsTitle = document.createElement('h2');
     ingredientsTitle.classList.add('title', 'is-3');
+    ingredientsTitle.innerHTML = "Ingredients";
     modalContent.append(ingredientsTitle);
 
     var listOne = document.createElement('li');
-    listOne.innerHTML = resultObj.strMeasure1 + " - " + resultObj.strIngredient1 ;
+    listOne.innerHTML = resultObj.strMeasure1 + " " + resultObj.strIngredient1 ;
     ingredientsTitle.append(listOne);
-    if(resultObj.strIngredient1 === undefined || null) {
+    if(resultObj.strIngredient1 === undefined || resultObj.strIngredient1 === null) {
         listOne.style.display = "none";
     }
 
     var listTwo = document.createElement('li');
-    listTwo.innerHTML = resultObj.strMeasure2 + " - " + resultObj.strIngredient2 ;
+    listTwo.innerHTML = resultObj.strMeasure2 + " " + resultObj.strIngredient2 ;
     ingredientsTitle.append(listTwo);
-    if(resultObj.strIngredient2 === undefined) {
+    if(resultObj.strIngredient2 === undefined || resultObj.strIngredient2 === null) {
         listTwo.style.display = "none";
     }
 
     var listThree = document.createElement('li');
-    listThree.innerHTML = resultObj.strMeasure3 + " - " + resultObj.strIngredient3 ;
+    listThree.innerHTML = resultObj.strMeasure3 + " " + resultObj.strIngredient3 ;
     ingredientsTitle.append(listThree);
-    if(resultObj.strIngredient3 === undefined) {
+    if(resultObj.strIngredient3 === undefined || resultObj.strIngredient3 === null) {
         listThree.style.display = "none";
     }
 
     var listFour = document.createElement('li');
-    listFour.innerHTML = resultObj.strMeasure4 + " - " + resultObj.strIngredient4;
+    listFour.innerHTML = resultObj.strMeasure4 + " " + resultObj.strIngredient4;
     ingredientsTitle.append(listFour);
-    if(resultObj.strIngredient4 === undefined) {
+    if(resultObj.strIngredient4 === undefined || resultObj.strIngredient4 === null) {
         listFour.style.display = "none";
     }
 
     var listFive = document.createElement('li');
-    listFive.innerHTML = resultObj.strMeasure5 + " - " + resultObj.strIngredient5;
+    listFive.innerHTML = resultObj.strMeasure5 + " " + resultObj.strIngredient5;
     ingredientsTitle.append(listFive);
-    if(resultObj.strIngredient5 === undefined) {
+    if(resultObj.strIngredient5 === undefined || resultObj.strIngredient5 === null) {
           listFive.style.display = "none";
     }
 
     var listSix = document.createElement('li');
-    listSix.innerHTML = resultObj.strMeasure6 + " - " + resultObj.strIngredient6;
+    listSix.innerHTML = resultObj.strMeasure6 + " " + resultObj.strIngredient6;
     ingredientsTitle.append(listSix);
-    if(resultObj.strIngredient6 === undefined) {
+    if(resultObj.strIngredient6 === undefined || resultObj.strIngredient6 === null) {
           listSix.style.display = "none";
     }
 
     var listSeven = document.createElement('li');
-    listSeven.innerHTML = resultObj.strMeasure7 + " - " + resultObj.strIngredient7;
+    listSeven.innerHTML = resultObj.strMeasure7 + " " + resultObj.strIngredient7;
     ingredientsTitle.append(listSeven);
-    if(resultObj.strIngredient7 === undefined) {
+    if(resultObj.strIngredient7 === undefined || resultObj.strIngredient7 === null) {
           listSeven.style.display = "none";
     }
 
     var listEight = document.createElement('li');
-    listEight.innerHTML = resultObj.strMeasure8 + " - " + resultObj.strIngredient8;
+    listEight.innerHTML = resultObj.strMeasure8 + " " + resultObj.strIngredient8;
     ingredientsTitle.append(listEight);
-    if(resultObj.strIngredient8 === undefined) {
+    if(resultObj.strIngredient8 === undefined || resultObj.strIngredient8 === null) {
           listEight.style.display = "none";
     }
 
     var listNine = document.createElement('li');
-    listNine.innerHTML = resultObj.strMeasure9 + " - " + resultObj.strIngredient9;
+    listNine.innerHTML = resultObj.strMeasure9 + " " + resultObj.strIngredient9;
     ingredientsTitle.append(listNine);
-    if(resultObj.strIngredient9 === undefined) {
+    if(resultObj.strIngredient9 === undefined || resultObj.strIngredient9 === null) {
           listNine.style.display = "none";
     }
 
     var listTen = document.createElement('li');
-    listTen.innerHTML = resultObj.strMeasure10 + " - " + resultObj.strIngredient10;
+    listTen.innerHTML = resultObj.strMeasure10 + " " + resultObj.strIngredient10;
     ingredientsTitle.append(listTen);
-    if(resultObj.strIngredient10 === undefined) {
+    if(resultObj.strIngredient10 === undefined || resultObj.strIngredient10 === null) {
           listTen.style.display = "none";
     }
 
     var listEleven = document.createElement('li');
-    listEleven.innerHTML = resultObj.strMeasure11 + " - " + resultObj.strIngredient11;
+    listEleven.innerHTML = resultObj.strMeasure11 + " " + resultObj.strIngredient11;
     ingredientsTitle.append(listEleven);
-    if(resultObj.strIngredient11 === undefined) {
+    if(resultObj.strIngredient11 === undefined || resultObj.strIngredient11 === null) {
           listEleven.style.display = "none";
     }
 
     var listTwelve = document.createElement('li');
-    listTwelve.innerHTML = resultObj.strMeasure12 + " - " + resultObj.strIngredient12;
+    listTwelve.innerHTML = resultObj.strMeasure12 + " " + resultObj.strIngredient12;
     ingredientsTitle.append(listTwelve);
-    if(resultObj.strIngredient12 === undefined) {
+    if(resultObj.strIngredient12 === undefined ||resultObj.strIngredient12 === null) {
           listTwelve.style.display = "none";
     }
 
     var listThirteen = document.createElement('li');
-    listThirteen.innerHTML = resultObj.strMeasure13 + " - " + resultObj.strIngredient13;
+    listThirteen.innerHTML = resultObj.strMeasure13 + " " + resultObj.strIngredient13;
     ingredientsTitle.append(listThirteen);
-    if(resultObj.strIngredient13 === undefined) {
+    if(resultObj.strIngredient13 === undefined || resultObj.strIngredient13 === null) {
           listThirteen.style.display = "none";
     }
 
     var listFourteen = document.createElement('li');
-    listFourteen.innerHTML = resultObj.strMeasure14 + " - " + resultObj.strIngredient14;
+    listFourteen.innerHTML = resultObj.strMeasure14 + " " + resultObj.strIngredient14;
     ingredientsTitle.append(listFourteen);
-    if(resultObj.strIngredient14 === undefined) {
+    if(resultObj.strIngredient14 === undefined || resultObj.strIngredient14 === null) {
           listFourteen.style.display = "none";
     }
 
     var listFifteen = document.createElement('li');
-    listFifteen.innerHTML = resultObj.strMeasure15 + " - " + resultObj.strIngredient15;
+    listFifteen.innerHTML = resultObj.strMeasure15 + " " + resultObj.strIngredient15;
     ingredientsTitle.append(listFifteen);
-    if(resultObj.strIngredient15 === undefined) {
+    if(resultObj.strIngredient15 === undefined || resultObj.strIngredient15 === null) {
           listFifteen.style.display = "none";
     }
 
@@ -259,21 +257,22 @@ function printDesc(resultObj){
 }
 
 // see full recipe button and modal
-var button = document.getElementById('button');
-var modal = document.getElementById('page-modal');
-var closeModal = document.getElementsByClassName('modal-close')[0];
-
+function showModal(resultObj){
+var button = document.getElementById('button'+resultObj.idDrink);
+var modal = document.getElementById('page-modal'+resultObj.idDrink);
+var closeModal = document.getElementsByClassName('modal-close');
 
 button.onclick = function(){
-    modal.style.display = 'block'
-    
-}
+    modal.style.display = 'block'   
+};
+
 closeModal.onclick = function(){
     modal.style.display = 'none'
-}
+};
 
 window.onclick = function(event){
     if (event.target.className == 'modal-background'){
         modal.style.display = 'none'
     }
 }
+};
