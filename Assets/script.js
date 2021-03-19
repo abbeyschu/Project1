@@ -7,7 +7,6 @@ var searchButton = document.getElementById("search-2");
 var searchInput = document.getElementById("recipe-search-2");
 var resultContentEl = document.querySelector('#result-content');
 
-
 function printResults(resultObj) {
     console.log(resultObj);
   

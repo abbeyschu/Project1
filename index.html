@@ -7,6 +7,8 @@
     <title>Recipe Finder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Assets/style.css">
 </head>
 <body>
@@ -14,14 +16,23 @@
     <div class="hero-body">
       <div class= "columns">
          <div class= "column is-7">
-            <p class="title">Recipe Finder</p>
+            <p class="title-1">Recipe Finder</p>
               <p class="subtitle"></p>
           </div>
-                
+          <div class="control">
+            <label class="radio">
+              <input type="radio" name="foobar">
+              <strong>Food</strong>
+            </label>
+            <label class="radio">
+              <input type="radio" name="foobar" checked>
+              <strong>Drink</strong>
+            </label>
+          </div>
           <div class= "column is-5">
             <div class="field has-addons" id= "topbar-search">
               <div class="control is-expanded has-icons-left">
-                <input class="input is-medium is-success" id="recipe-search-2" type="text"
+                <input class="input is-medium is-success" id="recipe-search-2" type="text" 
                     placeholder="Type the meal here">
                   <span class="icon is-left">
                     <i class="fas fa-search" aria-hidden="true"></i>
@@ -31,37 +42,14 @@
                 <button class="button is-medium is-success" id="search-2">Search</button>
               </div>
             </div>
-            <p id="favorites"> Or <span class="favorites-link">view your saved favorites</span></p>
-            <div class="desktop-hide" id="mobile-buttons">
-              <div class="dropdown">
-                <div class="dropdown-trigger">
-                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                    <span>Click me</span>
-                    <span class="icon is-small">
-                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                  </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                  <div class="dropdown-content">
-                    <a href="#" class="dropdown-item">Overview</a>
-                    <a href="#" class="dropdown-item">Modifiers</a>
-                    <a href="#" class="dropdown-item">Grid</a>
-                    <a href="#" class="dropdown-item">Form</a>
-                    <a href="#" class="dropdown-item">Elements</a>
-                    <a href="#" class="dropdown-item">Components</a>
-                    <a href="#" class="dropdown-item">Layout</a>
-                      <hr class="dropdown-divider">
-                    <a href="#" class="dropdown-item">More</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
       </div>
     </div>    
   </section>
     <!-- Recipe list: should pop up when search button is clicked and display recipes -->
+
+<div class="row">
+<div id="result-content">
 <div id="result-content" class="result-content">
     <div class="columns">
       <div class="column is-one-third" id="card-append">
@@ -80,7 +68,6 @@
             <p class="subtitle is-6">Breakfast</p>
           </div>
         </div>
-    
         <div class="content">
           For an extra thick and creamy bowl, add oat bran. It'll make for a hearty helping and also add more fiber to your meal. If you love the taste of chai, you'll enjoy this spiced version with coriander, cinnamon, and turmeric.
           <br>
@@ -93,6 +80,40 @@
   </div>
   </div>
 </div>
+
+<div class="row">
+  <div id="result-content">
+      <div class="columns">
+        <div class="column is-one-third">
+    <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/oatmeal.jpg" alt="Placeholder image">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+            </div>
+            <div class="media-content">
+              <p class="title is-4">Chai Oatmeal</p>
+              <p class="subtitle is-6">Breakfast</p>
+            </div>
+          </div>
+          <div class="content">
+            For an extra thick and creamy bowl, add oat bran. It'll make for a hearty helping and also add more fiber to your meal. If you love the taste of chai, you'll enjoy this spiced version with coriander, cinnamon, and turmeric.
+            <br>
+           <strong> Ingredients:</strong> Milk, salt, coriander, cardamom, cinnamon, turmeric, honey, vanilla extract, regular oats, oat bran.
+           <br>
+           <button class="button is-fullwidth" id = "button">See full recipe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
 
   <div class="modal"id="page-modal">
     <div class="modal-background"></div>
@@ -114,6 +135,7 @@
         <h2 class="title is-3">Step by Step Instructions</h2>
       <p>How to prepare food or Drink Selected</p>
 
+       
     <script src="script.js"></script>
     <script src="Assets/script.js"></script>
 
