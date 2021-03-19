@@ -57,6 +57,14 @@ body {
 .is-fullwidth {
     background-color: lightgreen;
 }
+
+.modal-card-head {
+background-color: #fae6b1;
+
+}
+.modal-card-body {
+  background-color: #b3dee5;
+  
 /* .result-content{
   margin-top: 50px;
   width: 100%;
