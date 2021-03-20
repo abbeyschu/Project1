@@ -27,14 +27,13 @@ function fetchApi(searchInput) {
 }
 // function to display receipe (img, title and calories)
 function generateHTML(results) {
-
-  let generatedHTML = '';
-  //every time we are looping through the results, create a card using the format in the HTML
-  results.map(result => {
-    console.log(result)
-    generatedHTML +=
-      `
-<div class="card">
+    let generatedHTML = '';
+    //every time we are looping through the results, create a card using the format in the HTML
+    results.map(result => {
+      console.log(result)
+        generatedHTML +=
+            `<div class="column is-3">
+<div class="card invisible">
       <div class="card-image">
         <figure class="image is-4by3">
         
@@ -59,6 +58,7 @@ function generateHTML(results) {
         </div>
       </div>
     </div>
+</div>
 `
   })
   searchRecipe.insertAdjacentHTML("beforeend", generatedHTML);
