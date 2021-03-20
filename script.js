@@ -33,8 +33,8 @@ function generateHTML(results) {
     results.map(result => {
       console.log(result)
         generatedHTML +=
-            `
-<div class="card">
+            `<div class="column is-3">
+<div class="card invisible">
       <div class="card-image">
         <figure class="image is-4by3">
         
@@ -59,6 +59,7 @@ function generateHTML(results) {
         </div>
       </div>
     </div>
+</div>
 `
     })
     searchRecipe.insertAdjacentHTML("beforeend",generatedHTML) ;
