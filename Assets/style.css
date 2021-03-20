@@ -1,8 +1,9 @@
 
 body {
-    background-image: linear-gradient(to top left,#B3DEE5 , #B3DEE5, #FAE6B1);
+    background-image: linear-gradient(to bottom right,#f4fbfc , #f4fbfc, #f4fbfc, #B3DEE5);
     text-align: left;
     color: black;
+    background-color: transparent;
 }
 
 .card {
@@ -40,6 +41,7 @@ body {
   .title {
     font-family: 'Corben', Georgia, Times, serif;
     text-shadow: 1px 1px 1px #ccc;
+    color: #;
   }
 
   .subtitle {
@@ -48,7 +50,18 @@ body {
   }
 
   .hero-body {
-    background-image: linear-gradient(to top right, #B3DEE5 , );
+    background-image: linear-gradient(to top right,#A8763E , #E8A87C, #FFFFFF );
+    color: #FFFFFF;
+  }
+
+  .title-1 {
+    color:#FFFFFF ;
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+  }
+
+  #search-2 {
+    background-color:#FFA101 ;
   }
 
   img {
@@ -59,8 +72,25 @@ body {
 }
 
 .is-fullwidth {
-    background-color: lightgreen;
+    background-color:#A8763E ;
 }
+
+.row {
+  display: flex;
+}
+
+
+#button {
+  color: #FFFFFF;
+}
+
+.modal-card-head {
+background-color: #fae6b1;
+
+}
+.modal-card-body {
+  background-color: #b3dee5;
+  
 /* .result-content{
   margin-top: 50px;
   width: 100%;
