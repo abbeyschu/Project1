@@ -37,7 +37,6 @@ body {
   .title {
     font-family: 'Corben', Georgia, Times, serif;
     text-shadow: 1px 1px 1px #ccc;
-    color: #;
   }
 
   .subtitle {
@@ -71,11 +70,6 @@ body {
     background-color:#A8763E ;
 }
 
-.row {
-  display: flex;
-}
-
-
 #button {
   color: #FFFFFF;
 }
@@ -86,15 +80,16 @@ background-color: #fae6b1;
 }
 .modal-card-body {
   background-color: #b3dee5;
-  
+} 
 /* .result-content{
   margin-top: 50px;
   width: 100%;
   display: grid;
   grid-gap:25px;
   grid-template: auto/repeat(auto-fit, minmax(300px)1fr);
-} */
+} 
 
 .card.invisible{
   display: none;
 }
+*/
