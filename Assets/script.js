@@ -98,6 +98,13 @@ function printResults(resultObj) {
 
 searchButton.addEventListener("click", searchApi);
 
+//This function appends the list of previous foods searched
+function foodList() {
+  let listItem = $("<li>").addClass("list-item").text(searchButton);
+  $(".list").append(listItem);}
+
+
+
 // see full recipe button and modal
 var button = document.getElementById('button');
 var modal = document.getElementById('page-modal');
