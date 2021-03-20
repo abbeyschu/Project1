@@ -97,9 +97,17 @@ function searchApi() {
 
 searchButton.addEventListener("click", searchApi);
 
+
+//This function appends the list of previous foods searched
+function foodList() {
+  let listItem = $("<li>").addClass("list-item").text(searchButton);
+  $(".list").append(listItem);}
+
+
 // create html elements for modal
 function printDesc(resultObj){
     var allModals = document.querySelector("#allModals");
+
 
     var modal = document.createElement('div');
     modal.classList.add('modal');
