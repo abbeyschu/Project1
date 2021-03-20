@@ -75,7 +75,7 @@ function searchApi() {
         console.log(data);
         for (var i = 0; i < data.drinks.length; i++) {
             printResults(data.drinks[i]);
-            showModal(data.drinks[i])
+            showModal(data.drinks[i]);
         }});
 
     fetch(cocktailIngredientURL)
@@ -88,7 +88,7 @@ function searchApi() {
             .then(data=>{
                 console.log(data);
                 printResults(data.drinks[0]);
-                showModal(data.drinks[0])
+                showModal(data.drinks[0]);
             })
         }
     });
@@ -107,6 +107,7 @@ function printDesc(resultObj){
 
     var modalBackground =document.createElement('div');
     modalBackground.classList.add('modal-background');
+    modalBackground.setAttribute('id','background'+resultObj.idDrink);
     modal.append(modalBackground);
 
     var modalCard = document.createElement('div');
@@ -125,6 +126,7 @@ function printDesc(resultObj){
     var closeButton = document.createElement('button');
     closeButton.classList.add('modal-close');
     closeButton.setAttribute('aria-label','close');
+    closeButton.setAttribute('id','close'+ resultObj.idDrink);
     header.append(closeButton);
 
     var cardBody = document.createElement('section');
@@ -256,11 +258,13 @@ function printDesc(resultObj){
 
 }
 
-// see full recipe button and modal
+// see full recipe button and modal, and then close it
 function showModal(resultObj){
+
 var button = document.getElementById('button'+resultObj.idDrink);
 var modal = document.getElementById('page-modal'+resultObj.idDrink);
-var closeModal = document.getElementsByClassName('modal-close');
+var closeModal = document.getElementById('close'+ resultObj.idDrink);
+var background = document.getElementById('background'+resultObj.idDrink);
 
 button.onclick = function(){
     modal.style.display = 'block'   
@@ -270,9 +274,6 @@ closeModal.onclick = function(){
     modal.style.display = 'none'
 };
 
-window.onclick = function(event){
-    if (event.target.className == 'modal-background'){
-        modal.style.display = 'none'
-    }
-}
-};
+background.onclick = function(){
+    modal.style.display = 'none'
+}};
