@@ -87,7 +87,7 @@ function viewRecipes() {
 <h2 class="title is-3">Ingredients</h2>
 <li>${result.recipe.ingredients[0]}</li>
 <li>${result.recipe.ingredients[0]}</li>
-<li>${result.recipe.ingredients[0,1]}</li>
+<li>${result.recipe.ingredients[0]}</li>
 <h2 class="title is-3">Step by Step Instructions:${result.recipe.url} </h2>
 
 `;
