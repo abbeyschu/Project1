@@ -34,7 +34,7 @@ function generateHTML(results) {
     console.log(result)
     generatedHTML +=
       `
-<div class="card">
+<div class="card column is-one-quarter">
       <div class="card-image">
         <figure class="image is-4by3">
         

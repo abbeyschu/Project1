@@ -9,7 +9,7 @@ function printResults(resultObj) {
   
     // create html elements to hold results content
     var card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('card','column','is-one-quarter');
     columnDiv.append(card);
 
     var cardImage = document.createElement('div');
