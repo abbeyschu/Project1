@@ -114,6 +114,15 @@ function printDesc(resultObj){
     modalCard.classList.add('modal-card');
     modal.append(modalCard);
 
+    var modalImage = document.createElement('p');
+    modalImage.classList.add("image", "is-3by1");
+    modalCard.append(modalImage);
+
+    var imageSrc = document.createElement('img');
+    imageSrc.setAttribute('src',resultObj.strDrinkThumb);
+    modalImage.append(imageSrc);
+
+
     var header = document.createElement('header');
     header.classList.add('modal-card-head');
     modalCard.append(header);
@@ -148,12 +157,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient1 === undefined || resultObj.strIngredient1 === null) {
         listOne.style.display = "none";
     }
+    if(resultObj.strMeasure1 === null){
+        listOne.innerHTML = resultObj.strIngredient1;
+    }
 
     var listTwo = document.createElement('li');
     listTwo.innerHTML = resultObj.strMeasure2 + " " + resultObj.strIngredient2 ;
     ingredientsTitle.append(listTwo);
     if(resultObj.strIngredient2 === undefined || resultObj.strIngredient2 === null) {
         listTwo.style.display = "none";
+    }
+    if(resultObj.strMeasure2 === null){
+        listTwo.innerHTML = resultObj.strIngredient2;
     }
 
     var listThree = document.createElement('li');
@@ -162,12 +177,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient3 === undefined || resultObj.strIngredient3 === null) {
         listThree.style.display = "none";
     }
+    if(resultObj.strMeasure3 === null){
+        listThree.innerHTML = resultObj.strIngredient3;
+    }
 
     var listFour = document.createElement('li');
     listFour.innerHTML = resultObj.strMeasure4 + " " + resultObj.strIngredient4;
     ingredientsTitle.append(listFour);
     if(resultObj.strIngredient4 === undefined || resultObj.strIngredient4 === null) {
         listFour.style.display = "none";
+    }
+    if(resultObj.strMeasure4 === null){
+        listFour.innerHTML = resultObj.strIngredient4;
     }
 
     var listFive = document.createElement('li');
@@ -176,12 +197,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient5 === undefined || resultObj.strIngredient5 === null) {
           listFive.style.display = "none";
     }
+    if(resultObj.strMeasure5 === null){
+        listFive.innerHTML = resultObj.strIngredient5;
+    }
 
     var listSix = document.createElement('li');
     listSix.innerHTML = resultObj.strMeasure6 + " " + resultObj.strIngredient6;
     ingredientsTitle.append(listSix);
     if(resultObj.strIngredient6 === undefined || resultObj.strIngredient6 === null) {
           listSix.style.display = "none";
+    }
+    if(resultObj.strMeasure6 === null){
+        listSix.innerHTML = resultObj.strIngredient6;
     }
 
     var listSeven = document.createElement('li');
@@ -190,12 +217,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient7 === undefined || resultObj.strIngredient7 === null) {
           listSeven.style.display = "none";
     }
+    if(resultObj.strMeasure7 === null){
+        listSeven.innerHTML = resultObj.strIngredient7;
+    }
 
     var listEight = document.createElement('li');
     listEight.innerHTML = resultObj.strMeasure8 + " " + resultObj.strIngredient8;
     ingredientsTitle.append(listEight);
     if(resultObj.strIngredient8 === undefined || resultObj.strIngredient8 === null) {
           listEight.style.display = "none";
+    }
+    if(resultObj.strMeasure8 === null){
+        listEight.innerHTML = resultObj.strIngredient8;
     }
 
     var listNine = document.createElement('li');
@@ -204,12 +237,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient9 === undefined || resultObj.strIngredient9 === null) {
           listNine.style.display = "none";
     }
+    if(resultObj.strMeasure9 === null){
+        listNine.innerHTML = resultObj.strIngredient9;
+    }
 
     var listTen = document.createElement('li');
     listTen.innerHTML = resultObj.strMeasure10 + " " + resultObj.strIngredient10;
     ingredientsTitle.append(listTen);
     if(resultObj.strIngredient10 === undefined || resultObj.strIngredient10 === null) {
           listTen.style.display = "none";
+    }
+    if(resultObj.strMeasure10 === null){
+        listTen.innerHTML = resultObj.strIngredient10;
     }
 
     var listEleven = document.createElement('li');
@@ -218,12 +257,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient11 === undefined || resultObj.strIngredient11 === null) {
           listEleven.style.display = "none";
     }
+    if(resultObj.strMeasure11 === null){
+        listEleven.innerHTML = resultObj.strIngredient11;
+    }
 
     var listTwelve = document.createElement('li');
     listTwelve.innerHTML = resultObj.strMeasure12 + " " + resultObj.strIngredient12;
     ingredientsTitle.append(listTwelve);
     if(resultObj.strIngredient12 === undefined ||resultObj.strIngredient12 === null) {
           listTwelve.style.display = "none";
+    }
+    if(resultObj.strMeasure12 === null){
+        listTwelve.innerHTML = resultObj.strIngredient12;
     }
 
     var listThirteen = document.createElement('li');
@@ -232,6 +277,9 @@ function printDesc(resultObj){
     if(resultObj.strIngredient13 === undefined || resultObj.strIngredient13 === null) {
           listThirteen.style.display = "none";
     }
+    if(resultObj.strMeasure13 === null){
+        listThirteen.innerHTML = resultObj.strIngredient13;
+    }
 
     var listFourteen = document.createElement('li');
     listFourteen.innerHTML = resultObj.strMeasure14 + " " + resultObj.strIngredient14;
@@ -239,12 +287,18 @@ function printDesc(resultObj){
     if(resultObj.strIngredient14 === undefined || resultObj.strIngredient14 === null) {
           listFourteen.style.display = "none";
     }
+    if(resultObj.strMeasure14 === null){
+        listFourteen.innerHTML = resultObj.strIngredient14;
+    }
 
     var listFifteen = document.createElement('li');
     listFifteen.innerHTML = resultObj.strMeasure15 + " " + resultObj.strIngredient15;
     ingredientsTitle.append(listFifteen);
     if(resultObj.strIngredient15 === undefined || resultObj.strIngredient15 === null) {
           listFifteen.style.display = "none";
+    }
+    if(resultObj.strMeasure15 === null){
+        listFifteen.innerHTML = resultObj.strIngredient15;
     }
 
     var instructionHeader = document.createElement('h2');
