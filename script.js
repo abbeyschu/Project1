@@ -55,7 +55,7 @@ function generateHTML(results) {
         <br>
          <strong> Calories: </strong>${result.recipe.calories.toFixed(0)}
          <br>
-         <button data-target="#page-modal" data-toggle="modal" class="click is-fullwidth" >See full recipe</button>
+         <button class="click is-fullwidth" >See full recipe</button>
         </div>
       </div>
     </div>
@@ -63,12 +63,20 @@ function generateHTML(results) {
     })
     searchRecipe.insertAdjacentHTML("beforeend",generatedHTML) ;
     var viewRecipe=document.querySelector(".click");
-viewRecipe.onclick=viewRecipes 
-}   
-function viewRecipes(){
-
-console.log("pizza")
+    viewRecipe.onclick=viewRecipes;
 }
+
+
+function viewRecipes(){
+  var target=document.getElementById('pageModal');
+  target.style.display='block';
+console.log("pizza");
+}
+
+
+
+
+
 
        
 // calories result.recipe.calories; only show 2 #'s after decimal point

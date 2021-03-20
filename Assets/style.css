@@ -22,6 +22,10 @@ body {
         grid-gap:25px;
         grid-template: auto/repeat(auto-fit, minmax(300px)1fr);
     }
+
+    .momal{
+      color: red;
+    }
     
     .card:hover {
         opacity: 1;
