@@ -104,12 +104,6 @@ function foodList() {
   $(".list").append(listItem);}
 
 
-
-// see full recipe button and modal
-var button = document.getElementById('button');
-var modal = document.getElementById('page-modal');
-var closeModal = document.getElementsByClassName('modal-close')[0];
-
 // create html elements for modal
 function printDesc(resultObj){
     var allModals = document.querySelector("#allModals");
