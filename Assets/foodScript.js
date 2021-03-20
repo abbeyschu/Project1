@@ -1,4 +1,3 @@
-const searchButton = document.querySelector('#search-2');
 const searchRecipe = document.querySelector('#card-append');
 const result = document.querySelector('#result-content');
 const apiKey = '9b2b77378f38c14b074813a97058067c';
@@ -7,14 +6,11 @@ const url = `https://api.edamam.com/search?q=${searchInput}&app_id=${appId}&app_
 var searchInput = '';
 
 
-// activate search button
-searchButton.addEventListener('click', (event) => {
-  event.preventDefault();
-  //search button function
-  searchInput = document.querySelector('#recipe-search-2').value;
-  fetchApi(searchInput);
-})
+
 function fetchApi(searchInput) {
+
+  searchInput = document.querySelector('#recipe-search-2').value;
+
   fetch(
     `https://api.edamam.com/search?q=${searchInput}&app_id=${appId}&app_key=${apiKey}&from=0&to=20`
   )
@@ -25,8 +21,12 @@ function fetchApi(searchInput) {
       generateHTML(data.hits)
     });
 }
-// function to display receipe (img, title and calories)
+
+// function to display recipe (img, title and calories)
 function generateHTML(results) {
+
+  var resultsDiv = document.querySelector('#card-append')
+  resultsDiv.textContent = "";
 
   let generatedHTML = '';
   //every time we are looping through the results, create a card using the format in the HTML
