@@ -4,6 +4,7 @@ var resultContentEl = document.querySelector('#result-content');
 var columnDiv = document.querySelector('.is-one-third');
 
 // create all html elements
+
 function printResults(resultObj) {
     console.log(resultObj);
   
