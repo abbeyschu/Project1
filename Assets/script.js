@@ -8,7 +8,7 @@ searchButton.addEventListener("click", function(event){
         searchApi();
     } else if (document.getElementById("foodCheck").checked){
         event.preventDefault();
-        fetchApi(searchInput);
+        findApi(searchInput);
         }
     });
 

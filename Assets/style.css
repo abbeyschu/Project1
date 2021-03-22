@@ -93,3 +93,21 @@ background-color: #fae6b1;
   display: none;
 }
 */
+.view-btn{
+
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  padding: 10px 0;
+  background-color: #d1901f;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left:50px;
+  border-radius: 4px;
+  align-self:flex-start;
+  width: 200px;
+  display: inline-block;
+}
+

@@ -7,7 +7,7 @@ var searchInput = '';
 
 
 
-function fetchApi(searchInput) {
+function findApi(searchInput) {
 
   searchInput = document.querySelector('#recipe-search-2').value;
 
@@ -18,21 +18,21 @@ function fetchApi(searchInput) {
     .then((data) => {
       console.log(data);
       //a function to pass the hits inside the data
-      generateHTML(data.hits)
+      generateCards(data.hits)
     });
 }
 
 // function to display recipe (img, title and calories)
-function generateHTML(results) {
+function generateCards(results) {
 
   var resultsDiv = document.querySelector('#card-append')
   resultsDiv.textContent = "";
 
-  let generatedHTML = '';
+  let generatedCards= '';
   //every time we are looping through the results, create a card using the format in the HTML
   results.map(result => {
     console.log(result)
-    generatedHTML +=
+    generatedCards +=
       `
 <div class="card column is-one-quarter">
       <div class="card-image">
@@ -55,11 +55,12 @@ function generateHTML(results) {
         <br>
          <strong> Calories: </strong>${result.recipe.calories.toFixed(0)}
          <br>
+        
          <a class="view-btn" target="_blank" href="${result.recipe.url}">View Recipe</a> 
         </div>
       </div>
     </div>
 `
 })
-searchRecipe.innerHTML = generatedHTML;
+searchRecipe.innerHTML = generatedCards;
 };
