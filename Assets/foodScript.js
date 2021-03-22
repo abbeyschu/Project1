@@ -55,51 +55,11 @@ function generateHTML(results) {
         <br>
          <strong> Calories: </strong>${result.recipe.calories.toFixed(0)}
          <br>
-         <button class="click is-fullwidth">See full recipe</button>
+         <a class="view-btn" target="_blank" href="${result.recipe.url}">View Recipe</a> 
         </div>
       </div>
     </div>
 `
-  })
-  searchRecipe.insertAdjacentHTML("beforeend", generatedHTML);
-  var viewRecipe = document.querySelector(".click");
-  viewRecipe.onclick = viewRecipes;
-}
-
-
-function viewRecipes() {
-  var target = document.getElementById('page-modal');
-  target.style.display = 'block';
-  console.log("pizza");
-  result = result[0];
-  let html = `
-  <div class="modal-card" >
-      <p class="image is-3by1">
-        <img src="${result.recipe.image}" alt="">
-      </p>
-      
-      <header class="modal-card-head">
-<p class="modal-card-title title is-2">${result.recipe.label}</p>
-<button class="modal-close" aria-label="close"></button>
-</header>
-<section class="modal-card-body">
-<div class="modal-content">
-<h2 class="title is-3">Ingredients</h2>
-<li>${result.recipe.ingredients[0]}</li>
-<li>${result.recipe.ingredients[0]}</li>
-<li>${result.recipe.ingredients[0]}</li>
-<h2 class="title is-3">Step by Step Instructions:${result.recipe.url} </h2>
-
-`;
-
-}
-
-
-
-
-
-
-// var viewInstructions=document.querySelector(modal-card-title);
-
-// calories result.recipe.calories; only show 2 #'s after decimal point
-//activate recipe button; add to the button ${}
+})
+searchRecipe.innerHTML = generatedHTML;
+};
