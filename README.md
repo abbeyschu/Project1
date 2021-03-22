@@ -2,7 +2,7 @@
 
 ## Description
 
-The website app our group created allows a user to enter a desired meal into a search input field, which will return a list of recipes (results) that the user can then click on to display an image of the meal, ingredients, nutritional value, and cooking instructions. 
+The goal of this project was to create a recipe search webpage that allows a user to enter a desired meal or beverage into a search input field and view a list of recipes (results). The user can click on a result to either visit the original recipe URL or to display an image and instructions.
 
 ## Installation
 
@@ -10,25 +10,32 @@ Visit this link to view the recipe finder: https://abbeyschu.github.io/RecipeSea
 
 ## Instructions
 
-WHEN I enter a type of meal (example: lasagna)
+WHEN I select a recipe category (food or drink) and enter a search input (example: lasagna)
 
-THEN I am presented with a list of recipes for the meal.
+THEN I am presented with a list of recipes that meet the search criteria.
 
-WHEN I click on a recipe
+WHEN I click on a food recipe
 
-THEN I am presented with a list of ingredients, their nutritional values, and cooking instructions.
+THEN I am directed to a URL with complete instructions
+
+WHEN I click on a drink recipe
+
+THEN I am presented with an image, ingredients, and instructions for that drink
 
 WHEN I search for a new recipe
 
-THEN my previous searches are saved in the search history.
-
-WHEN I mark a recipe as a favorite/one I want to save
-
-THEN the recipe will be saved in a list I can access.
+THEN the previous results are cleared and only the new results are shown
 
 ## Screenshots
 
-![Image of Results Page](Assets/Images/Results.png)
+Image of drink results after an initial search:
+
+![Image of Results Page](Assets/Images/SearchResults.png)
+
+Image of Modal with complete instructions:
+
+![Image of Modal](Assets/Images/DrinkModal.png)
+
 
 ## Technologies
 

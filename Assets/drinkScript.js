@@ -9,7 +9,7 @@ function printResults(resultObj) {
   
     // create html elements to hold results content
     var card = document.createElement('div');
-    card.classList.add('card','column','is-one-quarter');
+    card.classList.add('card','column','is-one-quarter-desktop','is-one-third-tablet','is-one-fifth-widescreen','is-half-mobile');
     columnDiv.append(card);
 
     var cardImage = document.createElement('div');
@@ -114,7 +114,7 @@ function printDesc(resultObj){
     modal.append(modalCard);
 
     var modalImage = document.createElement('p');
-    modalImage.classList.add("image", "is-3by1");
+    modalImage.classList.add("image","is-3by2");
     modalCard.append(modalImage);
 
     var imageSrc = document.createElement('img');
