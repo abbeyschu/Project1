@@ -30,11 +30,11 @@ THEN the previous results are cleared and only the new results are shown
 
 Image of drink results after an initial search:
 
-![Image of Results Page](Assets/Images/SearchResults.png)
+![Image of Results Page](Assets/images/SearchResults.png)
 
 Image of Modal with complete instructions:
 
-![Image of Modal](Assets/Images/DrinkModal.png)
+![Image of Modal](Assets/images/DrinkModal.png)
 
 
 ## Technologies
